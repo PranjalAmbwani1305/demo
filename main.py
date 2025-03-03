@@ -3,6 +3,8 @@ import requests
 from bs4 import BeautifulSoup
 import os
 from transformers import pipeline
+import sentence-transformers
+
 
 # Load Pinecone API key from secrets
 PINECONE_API_KEY = st.secrets["PINECONE_API_KEY"]
