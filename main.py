@@ -9,13 +9,12 @@ from transformers import pipeline
 PINECONE_API_KEY = st.secrets["PINECONE_API_KEY"]
 PINECONE_ENV = st.secrets["PINECONE_ENV"]
 
-pinecone.init(api_key=PINECONE_API_KEY, environment=PINECONE_ENV)
-index_name = "saudi-laws"
 
-# Initialize Pinecone index
-if index_name not in pinecone.list_indexes():
-    pinecone.create_index(index_name, dimension=384)  # Adjust dimension if needed
-index = pinecone.Index(index_name)
+from pinecone import Pinecone
+pc = Pinecone(api_key=PINECONE_API_KEY)
+index_name = "helpdesk"
+
+index = pc.Index(index_name)
 
 # Load embedding model
 embedder = pipeline("feature-extraction", model="sentence-transformers/all-MiniLM-L6-v2")
