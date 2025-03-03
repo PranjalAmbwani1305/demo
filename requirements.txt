@@ -3,4 +3,5 @@ beautifulsoup4
 requests
 pinecone-client
 transformers
+sentence-transformers
 pinecone
