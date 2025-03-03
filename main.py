@@ -11,7 +11,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 # Pinecone API Setup
 PINECONE_API_KEY = st.secrets["PINECONE_API_KEY"]
 PINECONE_ENV = st.secrets["PINECONE_ENV"]
-index_name = "helpddesk"
+index_name = "helpdesk"
 
 pc = Pinecone(api_key=PINECONE_API_KEY)
 index = pc.Index(index_name)
