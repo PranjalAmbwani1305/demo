@@ -3,7 +3,7 @@ import requests
 from bs4 import BeautifulSoup
 import os
 from transformers import pipeline
-import sentence-transformers
+import sentence_transformers
 
 
 # Load Pinecone API key from secrets
